@@ -1,0 +1,1207 @@
+{
+    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+    // Pointez pour afficher la description des attributs existants.
+    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cloud Run: Run/Debug Locally",
+            "type": "cloudcode.cloudrun",
+            "request": "launch",
+            "build": {
+                "docker": {
+                    "path": "Dockerfile"
+                }
+            },
+            "image": "${workspaceFolderBasename}",
+            "service": {
+                "name": "${workspaceFolderBasename}",
+                "containerPort": 8080,
+                "resources": {
+                    "limits": {
+                        "memory": "256Mi"
+                    }
+                }
+            },
+            "target": {
+                "minikube": {}
+            },
+            "watch": true
+        },
+        {
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/app.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
+            "name": "Docker .NET Attach (Preview)",
+            "type": "docker",
+            "request": "attach",
+            "platform": "netCore",
+            "sourceFileMap": {
+                "/src": "${workspaceFolder}"
+            }
+        },
+        {
+            "name": "Launch Package",
+            "type": "go",
+            "request": "launch",
+            "mode": "auto",
+            "program": "${fileDirname}"
+        },
+        {
+            "command": "npm start",
+            "name": "Run npm start",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "name": "Attach to Kubernetes Pod (Python)",
+            "type": "cloudcode.kubernetes",
+            "request": "attach",
+            "language": "Python",
+            "debugPort": 3000,
+            "podSelector": {
+                "app": "deployment-name"
+            },
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "Path to the Remote Directory Containing the Program"
+        },
+        {
+            "name": "Cloud Run: Run/Debug Locally",
+            "type": "cloudcode.cloudrun",
+            "request": "launch",
+            "build": {
+                "docker": {
+                    "path": "Dockerfile"
+                }
+            },
+            "image": "${workspaceFolderBasename}",
+            "service": {
+                "name": "${workspaceFolderBasename}",
+                "containerPort": 8080,
+                "resources": {
+                    "limits": {
+                        "memory": "256Mi"
+                    }
+                }
+            },
+            "target": {
+                "minikube": {}
+            },
+            "watch": true
+        },
+        {
+            "name": "Connect to server",
+            "type": "go",
+            "request": "attach",
+            "mode": "remote",
+            "remotePath": "${workspaceFolder}",
+            "port": 2345,
+            "host": "127.0.0.1"
+        },
+        {
+            "name": "Cloud Run: Run/Debug Locally",
+            "type": "cloudcode.cloudrun",
+            "request": "launch",
+            "build": {
+                "docker": {
+                    "path": "Dockerfile"
+                }
+            },
+            "image": "${workspaceFolderBasename}",
+            "service": {
+                "name": "${workspaceFolderBasename}",
+                "containerPort": 8080,
+                "resources": {
+                    "limits": {
+                        "memory": "256Mi"
+                    }
+                }
+            },
+            "target": {
+                "minikube": {}
+            },
+            "watch": true
+        },
+        {
+            "name": "(lldb) Joindre",
+            "type": "cppdbg",
+            "request": "attach",
+            "program": "entrer le nom du programme, par exemple ${workspaceFolder}/a.out",
+            "MIMode": "lldb"
+        }
+        {
+            "name": "Python : fichier actif",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Cloud Run: Run/Debug Locally",
+            "type": "cloudcode.cloudrun",
+            "request": "launch",
+            "build": {
+                "docker": {
+                    "path": "Dockerfile"
+                }
+            },
+            "image": "${workspaceFolderBasename}",
+            "service": {
+                "name": "${workspaceFolderBasename}",
+                "containerPort": 8080,
+                "resources": {
+                    "limits": {
+                        "memory": "256Mi"
+                    }
+                }
+            },
+            "target": {
+                "minikube": {}
+            },
+            "watch": true
+        },
+        {
+            "type": "chrome",
+            "name": "https://api.webtechnicom.net",
+            "request": "launch",
+            "url": "https://api.webtechnicom.net"
+        }
+    ]
+}    refunded_at_formatted: "",
+sent_invoice: "",
+sent_invoice_reminder: "",
+status: "paid",
+status_text: "paid",
+subscription_id: "sub-example-uSVpZQp8PA",
+support_email: "NETmanagement+example-zsmAniigl2w96y4MsZZ8TgOm@chargedesk.com",
+support_url: "https://billing.webtechnicom.net/example-zsmAniigl2w96y4MsZZ8TgOm",
+transaction_id: "transaction-example-qDWs0EpB1u"
+}
+}
+zsh: parse error near `
+}'
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % POST https: //api.chargedesk.com/v1/gateway/products/charge
+zsh: command not found: POST
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/gateway/products/charge \
+-u sk_******************************u0pd: \
+-d "contact=jane@example.com" \
+-d "amount=34.00" \
+-d "currency=EUR"
+zsh: command not found: #
+zsh: no matches found: sk_******************************u0pd:
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % >....                                                                            
+payment_method: "Credit",
+payment_method_brand: "Visa",
+payment_method_describe: "Visa credit card",
+product_desc: "",
+product_id: "prod-example-bmULbnYHF6",
+refunded_at_formatted: "",
+sent_invoice: "",
+sent_invoice_reminder: "",
+status: "paid",
+status_text: "paid",
+subscription_id: "sub-example-uSVpZQp8PA",
+support_email: "NETmanagement+example-zsmAniigl2w96y4MsZZ8TgOm@chargedesk.com",
+support_url: "https://billing.webtechnicom.net/example-zsmAniigl2w96y4MsZZ8TgOm",
+transaction_id: "transaction-example-qDWs0EpB1u"
+}
+}
+zsh: parse error near `
+}'
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % POST https: //api.chargedesk.com/v1/gateway/charges/{CHARGE_ID}/refund
+zsh: command not found: POST
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/gateway/charges/example-zsmAniigl2w96y4MsZZ8TgOm/refund \
+-u sk_******************************u0pd: \
+-d "amount=21.00"
+zsh: command not found: #
+zsh: no matches found: sk_******************************u0pd:
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % >....                                                                            
+payment_method: "Credit",
+payment_method_brand: "Visa",
+payment_method_describe: "Visa credit card",
+product_desc: "",
+product_id: "prod-example-bmULbnYHF6",
+refunded_at_formatted: "",
+sent_invoice: "",
+sent_invoice_reminder: "",
+status: "partially refunded",
+status_text: "partially refunded",
+subscription_id: "sub-example-uSVpZQp8PA",
+support_email: "NETmanagement+example-zsmAniigl2w96y4MsZZ8TgOm@chargedesk.com",
+support_url: "https://billing.webtechnicom.net/example-zsmAniigl2w96y4MsZZ8TgOm",
+transaction_id: "transaction-example-qDWs0EpB1u"
+}
+zsh: command not found: added_tax:
+zsh: command not found: amount:
+zsh: command not found: amount_formatted:
+zsh: command not found: amount_refunded:
+zsh: command not found: amount_refunded_formatted:
+zsh: command not found: amount_symbol:
+zsh: command not found: amount_with_commas:
+zsh: command not found: charge_id:
+zsh: command not found: company:
+zsh: command not found: currency:
+zsh: command not found: customer_country:
+zsh: command not found: customer_email:
+zsh: command not found: customer_id:
+zsh: command not found: customer_name:
+zsh: command not found: customer_phone:
+zsh: command not found: customer_username:
+zsh: command not found: description:
+zsh: command not found: email_last_sent:
+zsh: command not found: gateway_id:
+zsh: command not found: gateway_url:
+zsh: command not found: invoice_company:
+zsh: command not found: invoice_download_url:
+zsh: command not found: invoice_url:
+zsh: command not found: is_paid:
+zsh: command not found: last_4_digits:
+zsh: no matches found: [],
+zsh: command not found: manage_url:
+zsh: command not found: metadata:
+zsh: command not found: example_key:
+zsh: command not found:
+},
+zsh: command not found: methods_active:
+zsh: command not found: refund,
+zsh: command not found: email,
+zsh: command not found: edit-amount
+zsh: command not found:
+],
+zsh: command not found: methods_supported:
+zsh: command not found: refund,
+zsh: command not found: capture,
+zsh: command not found: edit,
+zsh: command not found: remind,
+zsh: command not found: email,
+zsh: command not found: stop-collection,
+zsh: command not found: retry,
+zsh: command not found: edit-amount
+zsh: command not found:
+],
+zsh: command not found: name_email:
+zsh: command not found: name_send_email:
+zsh: command not found: object:
+zsh: command not found: occurred:
+zsh: command not found: occurred_formatted:
+zsh: command not found: occurred_relative:
+zsh: command not found: payment_method:
+zsh: command not found: payment_method_brand:
+zsh: command not found: payment_method_describe:
+zsh: command not found: product_desc:
+zsh: command not found: product_id:
+zsh: command not found: refunded_at_formatted:
+zsh: command not found: sent_invoice:
+zsh: command not found: sent_invoice_reminder:
+zsh: command not found: status:
+zsh: command not found: status_text:
+zsh: command not found: subscription_id:
+zsh: command not found: support_email:
+zsh: command not found: support_url:
+zsh: command not found: transaction_id:
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % POST https: //api.chargedesk.com/v1/gateway/charges/{CHARGE_ID}/capture
+zsh: command not found: POST
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/gateway/charges/example-zsmAniigl2w96y4MsZZ8TgOm/capture \
+-u sk_******************************u0pd: \
+-d "amount=34.00"
+zsh: command not found: #
+zsh: no matches found: sk_******************************u0pd:
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % >....                                                                            
+payment_method: "Credit",
+payment_method_brand: "Visa",
+payment_method_describe: "Visa credit card",
+product_desc: "",
+product_id: "prod-example-bmULbnYHF6",
+refunded_at_formatted: "",
+sent_invoice: "",
+sent_invoice_reminder: "",
+status: "paid",
+status_text: "paid",
+subscription_id: "sub-example-uSVpZQp8PA",
+support_email: "NETmanagement+example-zsmAniigl2w96y4MsZZ8TgOm@chargedesk.com",
+support_url: "https://billing.webtechnicom.net/example-zsmAniigl2w96y4MsZZ8TgOm",
+transaction_id: "transaction-example-qDWs0EpB1u"
+}
+zsh: command not found: added_tax:
+zsh: command not found: amount:
+zsh: command not found: amount_formatted:
+zsh: command not found: amount_refunded:
+zsh: command not found: amount_refunded_formatted:
+zsh: command not found: amount_symbol:
+zsh: command not found: amount_with_commas:
+zsh: command not found: charge_id:
+zsh: command not found: company:
+zsh: command not found: currency:
+zsh: command not found: customer_country:
+zsh: command not found: customer_email:
+zsh: command not found: customer_id:
+zsh: command not found: customer_name:
+zsh: command not found: customer_phone:
+zsh: command not found: customer_username:
+zsh: command not found: description:
+zsh: command not found: email_last_sent:
+zsh: command not found: gateway_id:
+zsh: command not found: gateway_url:
+zsh: command not found: invoice_company:
+zsh: command not found: invoice_download_url:
+zsh: command not found: invoice_url:
+zsh: command not found: is_paid:
+zsh: command not found: last_4_digits:
+zsh: no matches found: [],
+zsh: command not found: manage_url:
+zsh: command not found: metadata:
+zsh: command not found: example_key:
+zsh: command not found:
+},
+zsh: command not found: methods_active:
+zsh: command not found: refund,
+zsh: command not found: email,
+zsh: command not found: edit-amount
+zsh: command not found:
+],
+zsh: command not found: methods_supported:
+zsh: command not found: refund,
+zsh: command not found: capture,
+zsh: command not found: edit,
+zsh: command not found: remind,
+zsh: command not found: email,
+zsh: command not found: stop-collection,
+zsh: command not found: retry,
+zsh: command not found: edit-amount
+zsh: command not found:
+],
+zsh: command not found: name_email:
+zsh: command not found: name_send_email:
+zsh: command not found: object:
+zsh: command not found: occurred:
+zsh: command not found: occurred_formatted:
+zsh: command not found: occurred_relative:
+zsh: command not found: payment_method:
+zsh: command not found: payment_method_brand:
+zsh: command not found: payment_method_describe:
+zsh: command not found: product_desc:
+zsh: command not found: product_id:
+zsh: command not found: refunded_at_formatted:
+zsh: command not found: sent_invoice:
+zsh: command not found: sent_invoice_reminder:
+zsh: command not found: status:
+zsh: command not found: status_text:
+zsh: command not found: subscription_id:
+zsh: command not found: support_email:
+zsh: command not found: support_url:
+zsh: command not found: transaction_id:
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % POST https: //api.chargedesk.com/v1/gateway/subscriptions/{SUBSCRIPTION_ID}/cancel 
+zsh: command not found: POST
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/gateway/subscriptions/sub-example-uSVpZQp8PA/cancel \
+-u sk_******************************u0pd: \
+-X POST
+zsh: command not found: #
+zsh: no matches found: sk_******************************u0pd:
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % >....                                                                            
+    "edit"
+],
+object: "subscription",
+product_desc: "",
+product_id: "prod-example-bmULbnYHF6",
+quantity: 2,
+readable_interval: "Monthly",
+setup_amount: 10,
+status: "canceled",
+status_text: "Canceled",
+subscription_id: "sub-example-uSVpZQp8PA",
+trial_end: 1698518388,
+trial_period_days: 14,
+trial_start: 0
+}
+zsh: command not found: amount:
+zsh: command not found: amount_formatted:
+zsh: command not found: amount_symbol:
+zsh: command not found: billing_cycles_current:
+zsh: command not found: billing_cycles_total:
+zsh: command not found: canceled_at:
+zsh: command not found: charges:
+zsh: command not found: company:
+zsh: command not found: currency:
+zsh: command not found: current_period_end:
+zsh: command not found: current_period_start:
+zsh: command not found: customer_id:
+zsh: command not found: ended_at:
+zsh: command not found: first_seen:
+zsh: command not found: gateway_id:
+zsh: command not found: gateway_url:
+zsh: command not found: has_items:
+zsh: command not found: interval:
+zsh: command not found: interval_count:
+zsh: no matches found: [],
+zsh: no matches found: [],
+zsh: command not found: manage_url:
+zsh: command not found: metadata:
+zsh: command not found: example_key:
+zsh: command not found:
+},
+zsh: no matches found: [],
+zsh: command not found: methods_supported:
+zsh: command not found: edit
+zsh: command not found:
+],
+zsh: command not found: object:
+zsh: command not found: product_desc:
+zsh: command not found: product_id:
+zsh: command not found: quantity:
+zsh: command not found: readable_interval:
+zsh: command not found: setup_amount:
+zsh: command not found: status:
+zsh: command not found: status_text:
+zsh: command not found: subscription_id:
+zsh: command not found: trial_end:
+zsh: command not found: trial_period_days:
+zsh: command not found: trial_start:
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % POST https: //api.chargedesk.com/v1/gateway/subscriptions/{SUBSCRIPTION_ID}/plans
+zsh: command not found: POST
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/gateway/subscriptions/sub-example-uSVpZQp8PA/plans \
+-u sk_******************************u0pd: \
+-X POST
+zsh: command not found: #
+zsh: no matches found: sk_******************************u0pd:
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % >....                                                                            
+    "edit"
+],
+object: "subscription",
+product_desc: "",
+product_id: "prod-example-bmULbnYHF6",
+quantity: 2,
+readable_interval: "Monthly",
+setup_amount: 10,
+status: "active",
+status_text: "Active",
+subscription_id: "sub-example-uSVpZQp8PA",
+trial_end: 1698518388,
+trial_period_days: 14,
+trial_start: 0
+}
+zsh: command not found: amount:
+zsh: command not found: amount_formatted:
+zsh: command not found: amount_symbol:
+zsh: command not found: billing_cycles_current:
+zsh: command not found: billing_cycles_total:
+zsh: command not found: canceled_at:
+zsh: command not found: charges:
+zsh: command not found: company:
+zsh: command not found: currency:
+zsh: command not found: current_period_end:
+zsh: command not found: current_period_start:
+zsh: command not found: customer_id:
+zsh: command not found: ended_at:
+zsh: command not found: first_seen:
+zsh: command not found: gateway_id:
+zsh: command not found: gateway_url:
+zsh: command not found: has_items:
+zsh: command not found: interval:
+zsh: command not found: interval_count:
+zsh: no matches found: [],
+zsh: no matches found: [],
+zsh: command not found: manage_url:
+zsh: command not found: metadata:
+zsh: command not found: example_key:
+zsh: command not found:
+},
+zsh: command not found: methods_active:
+zsh: command not found: edit
+zsh: command not found:
+],
+zsh: command not found: methods_supported:
+zsh: command not found: edit
+zsh: command not found:
+],
+zsh: command not found: object:
+zsh: command not found: product_desc:
+zsh: command not found: product_id:
+zsh: command not found: quantity:
+zsh: command not found: readable_interval:
+zsh: command not found: setup_amount:
+zsh: command not found: status:
+zsh: command not found: status_text:
+zsh: command not found: subscription_id:
+zsh: command not found: trial_end:
+zsh: command not found: trial_period_days:
+zsh: command not found: trial_start:
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % POST https: //api.chargedesk.com/v1/gateway/charges/{CHARGE_ID}/void
+zsh: command not found: POST
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/gateway/charges/example-zsmAniigl2w96y4MsZZ8TgOm/void \
+-u sk_******************************u0pd: \
+-X POST
+zsh: command not found: #
+zsh: no matches found: sk_******************************u0pd:
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % >....                                                                            
+payment_method: "Credit",
+payment_method_brand: "Visa",
+payment_method_describe: "Visa credit card",
+product_desc: "",
+product_id: "prod-example-bmULbnYHF6",
+refunded_at_formatted: "",
+sent_invoice: "",
+sent_invoice_reminder: "",
+status: "paid",
+status_text: "paid",
+subscription_id: "sub-example-uSVpZQp8PA",
+support_email: "NETmanagement+example-zsmAniigl2w96y4MsZZ8TgOm@chargedesk.com",
+support_url: "https://billing.webtechnicom.net/example-zsmAniigl2w96y4MsZZ8TgOm",
+transaction_id: "transaction-example-qDWs0EpB1u"
+}
+zsh: command not found: added_tax:
+zsh: command not found: amount:
+zsh: command not found: amount_formatted:
+zsh: command not found: amount_refunded:
+zsh: command not found: amount_refunded_formatted:
+zsh: command not found: amount_symbol:
+zsh: command not found: amount_with_commas:
+zsh: command not found: charge_id:
+zsh: command not found: company:
+zsh: command not found: currency:
+zsh: command not found: customer_country:
+zsh: command not found: customer_email:
+zsh: command not found: customer_id:
+zsh: command not found: customer_name:
+zsh: command not found: customer_phone:
+zsh: command not found: customer_username:
+zsh: command not found: description:
+zsh: command not found: email_last_sent:
+zsh: command not found: gateway_id:
+zsh: command not found: gateway_url:
+zsh: command not found: invoice_company:
+zsh: command not found: invoice_download_url:
+zsh: command not found: invoice_url:
+zsh: command not found: is_paid:
+zsh: command not found: last_4_digits:
+zsh: no matches found: [],
+zsh: command not found: manage_url:
+zsh: command not found: metadata:
+zsh: command not found: example_key:
+zsh: command not found:
+},
+zsh: command not found: methods_active:
+zsh: command not found: refund,
+zsh: command not found: email,
+zsh: command not found: edit-amount
+zsh: command not found:
+],
+zsh: command not found: methods_supported:
+zsh: command not found: refund,
+zsh: command not found: capture,
+zsh: command not found: edit,
+zsh: command not found: remind,
+zsh: command not found: email,
+zsh: command not found: stop-collection,
+zsh: command not found: retry,
+zsh: command not found: edit-amount
+zsh: command not found:
+],
+zsh: command not found: name_email:
+zsh: command not found: name_send_email:
+zsh: command not found: object:
+zsh: command not found: occurred:
+zsh: command not found: occurred_formatted:
+zsh: command not found: occurred_relative:
+zsh: command not found: payment_method:
+zsh: command not found: payment_method_brand:
+zsh: command not found: payment_method_describe:
+zsh: command not found: product_desc:
+zsh: command not found: product_id:
+zsh: command not found: refunded_at_formatted:
+zsh: command not found: sent_invoice:
+zsh: command not found: sent_invoice_reminder:
+zsh: command not found: status:
+zsh: command not found: status_text:
+zsh: command not found: subscription_id:
+zsh: command not found: support_email:
+zsh: command not found: support_url:
+zsh: command not found: transaction_id:
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % POST https: //api.chargedesk.com/v1/charges
+zsh: command not found: POST
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/charges \
+-u sk_******************************u0pd: \
+-d "amount=34.00" \
+-d "currency=EUR" \
+-d "customer[id]=cus-example-AO0Pnee1Rf"
+zsh: command not found: #
+zsh: no matches found: sk_******************************u0pd:
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % >....                                                                            
+payment_method: "Credit",
+payment_method_brand: "Visa",
+payment_method_describe: "Visa credit card",
+product_desc: "",
+product_id: "prod-example-bmULbnYHF6",
+refunded_at_formatted: "",
+sent_invoice: "",
+sent_invoice_reminder: "",
+status: "paid",
+status_text: "paid",
+subscription_id: "sub-example-uSVpZQp8PA",
+support_email: "NETmanagement+example-zsmAniigl2w96y4MsZZ8TgOm@chargedesk.com",
+support_url: "https://billing.webtechnicom.net/example-zsmAniigl2w96y4MsZZ8TgOm",
+transaction_id: "transaction-example-qDWs0EpB1u"
+}
+zsh: command not found: added_tax:
+zsh: command not found: amount:
+zsh: command not found: amount_formatted:
+zsh: command not found: amount_refunded:
+zsh: command not found: amount_refunded_formatted:
+zsh: command not found: amount_symbol:
+zsh: command not found: amount_with_commas:
+zsh: command not found: charge_id:
+zsh: command not found: company:
+zsh: command not found: currency:
+zsh: command not found: customer_country:
+zsh: command not found: customer_email:
+zsh: command not found: customer_id:
+zsh: command not found: customer_name:
+zsh: command not found: customer_phone:
+zsh: command not found: customer_username:
+zsh: command not found: description:
+zsh: command not found: email_last_sent:
+zsh: command not found: gateway_id:
+zsh: command not found: gateway_url:
+zsh: command not found: invoice_company:
+zsh: command not found: invoice_download_url:
+zsh: command not found: invoice_url:
+zsh: command not found: is_paid:
+zsh: command not found: last_4_digits:
+zsh: no matches found: [],
+zsh: command not found: manage_url:
+zsh: command not found: metadata:
+zsh: command not found: example_key:
+zsh: command not found:
+},
+zsh: command not found: methods_active:
+zsh: command not found: refund,
+zsh: command not found: email,
+zsh: command not found: edit-amount
+zsh: command not found:
+],
+zsh: command not found: methods_supported:
+zsh: command not found: refund,
+zsh: command not found: capture,
+zsh: command not found: edit,
+zsh: command not found: remind,
+zsh: command not found: email,
+zsh: command not found: stop-collection,
+zsh: command not found: retry,
+zsh: command not found: edit-amount
+zsh: command not found:
+],
+zsh: command not found: name_email:
+zsh: command not found: name_send_email:
+zsh: command not found: object:
+zsh: command not found: occurred:
+zsh: command not found: occurred_formatted:
+zsh: command not found: occurred_relative:
+zsh: command not found: payment_method:
+zsh: command not found: payment_method_brand:
+zsh: command not found: payment_method_describe:
+zsh: command not found: product_desc:
+zsh: command not found: product_id:
+zsh: command not found: refunded_at_formatted:
+zsh: command not found: sent_invoice:
+zsh: command not found: sent_invoice_reminder:
+zsh: command not found: status:
+zsh: command not found: status_text:
+zsh: command not found: subscription_id:
+zsh: command not found: support_email:
+zsh: command not found: support_url:
+zsh: command not found: transaction_id:
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % GET https: //api.chargedesk.com/v1/charges
+zsh: command not found: GET
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/charges?count=2 \
+-u sk_******************************u0pd:
+zsh: command not found: #
+zsh: no matches found: https: //api.chargedesk.com/v1/charges?count=2
+(base) webtechnicom@MacBook-Pro-de-steve e2e-playwright % >....                                                                            
+product_desc: "",
+product_id: "prod-example-bmULbnYHF6",
+refunded_at_formatted: "",
+sent_invoice: "",
+sent_invoice_reminder: "",
+status: "paid",
+status_text: "paid",
+subscription_id: "sub-example-uSVpZQp8PA",
+support_email: "NETmanagement+example-zsmAniigl2w96y4MsZZ8TgOm@chargedesk.com",
+support_url: "https://billing.webtechnicom.net/example-zsmAniigl2w96y4MsZZ8TgOm",
+transaction_id: "transaction-example-qDWs0EpB1u"
+},
+... more data items here ...
+]
+}
+cursh> GET https: //api.chargedesk.com/v1/charges/{CHARGE_ID}
+cursh> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/charges/example-zsmAniigl2w96y4MsZZ8TgOm \
+-u sk_******************************u0pd:
+cursh> >....                                                                                                                               
+payment_method: "Credit",
+payment_method_brand: "Visa",
+payment_method_describe: "Visa credit card",
+product_desc: "",
+product_id: "prod-example-bmULbnYHF6",
+refunded_at_formatted: "",
+sent_invoice: "",
+sent_invoice_reminder: "",
+status: "paid",
+status_text: "paid",
+subscription_id: "sub-example-uSVpZQp8PA",
+support_email: "NETmanagement+example-zsmAniigl2w96y4MsZZ8TgOm@chargedesk.com",
+support_url: "https://billing.webtechnicom.net/example-zsmAniigl2w96y4MsZZ8TgOm",
+transaction_id: "transaction-example-qDWs0EpB1u"
+}
+cursh> POST https: //api.chargedesk.com/v1/charges/{CHARGE_ID}
+cursh> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/charges/example-zsmAniigl2w96y4MsZZ8TgOm \
+-u sk_******************************u0pd: \
+-d "status=paid"
+cursh> >....                                                                                                                               
+payment_method: "Credit",
+payment_method_brand: "Visa",
+payment_method_describe: "Visa credit card",
+product_desc: "",
+product_id: "prod-example-bmULbnYHF6",
+refunded_at_formatted: "",
+sent_invoice: "",
+sent_invoice_reminder: "",
+status: "paid",
+status_text: "paid",
+subscription_id: "sub-example-uSVpZQp8PA",
+support_email: "NETmanagement+example-zsmAniigl2w96y4MsZZ8TgOm@chargedesk.com",
+support_url: "https://billing.webtechnicom.net/example-zsmAniigl2w96y4MsZZ8TgOm",
+transaction_id: "transaction-example-qDWs0EpB1u"
+}
+cursh> >....
+}
+},
+"target": {
+"minikube": {}
+},
+"watch": true
+},
+{
+"type": "chrome",
+"name": "https://api.webtechnicom.net",
+"request": "launch",
+"url": "https://api.webtechnicom.net"
+}
+]
+}
+cursh cursh quote> POST https: //api.chargedesk.com/v1/charges/{CHARGE_ID}/email
+cursh cursh quote> >....                                                                                                                   
+product_id optional
+The product to preview. Ignored if a charge_id is also provided.
+amount optional
+The amount to preview. Required if no charge or product is provided, otherwise will override the amount for the charge or product.
+currency optional
+The currency to preview. Required if no charge or product is provided, otherwise will override the currency for the charge or product.
+country optional
+Two-letter ISO code of the country where the customer is located.
+Example: US
+tax_number optional
+Tax ID. This is an alphanumeric tax identification for the customer. It is used to determine if the invoice should have 0% tax applied.
+Example: 123 123 1234
+add_tax optional
+Override the company setting for if tax is added to the final amount, or included in it.
+
+cursh cursh quote> GET https: //api.chargedesk.com/v1/charges/preview
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/charges/preview?charge_id=example-zsmAniigl2w96y4MsZZ8TgOm&amount=10.00&currency=USD&country=US \
+-u sk_******************************u0pd:
+cursh cursh quote> {
+"subtotalAmount": 10,
+"subtotalAmountFormatted": "$10.00",
+"taxRates": [
+{
+"name": "Tax",
+"rate": 10,
+"amount": 1,
+"amountFormatted": "$1.00"
+}
+],
+"totalAmount": 11,
+"totalAmountFormatted": "$11.00"
+}
+cursh cursh quote> DELETE https: //api.chargedesk.com/v1/charges/{CHARGE_ID}
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/charges/example-zsmAniigl2w96y4MsZZ8TgOm \
+-u sk_******************************u0pd: \
+-X DELETE
+cursh cursh quote> {
+"error": {
+"type": "unauthorized",
+"message": "We did not receive your API key in this request. You must provide an API key in the request header in the form 'Authorization: Basic SECRET_API_KEY:'.",
+"help_url": "https://chargedesk.com/api-docs#information-api-authentication"
+}
+}
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/charges/example-zsmAniigl2w96y4MsZZ8TgOm \
+-u sk_******************************u0pd: \
+-X DELETE
+cursh cursh quote> POST https: //api.chargedesk.com/v1/customers
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/customers \
+-u sk_******************************u0pd: \
+-d "customer_id=cus-example-AO0Pnee1Rf" \
+-d "country=US"
+cursh cursh quote> >....                                                                                                                   
+    "apply-coupon",
+"add-credit",
+"retry-failed"
+],
+name: "Jane Customer",
+object: "customer",
+phone: "+1 555-555-5555",
+readable_country: "Switzerland",
+shipping_address: "",
+subscriptions: [],
+tax_number: "123456789",
+tax_number_abr: "VAT",
+username: "janecustomer",
+website: "https://example.com"
+}
+cursh cursh quote> GET https: //api.chargedesk.com/v1/customers
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/customers?count=2 \
+-u sk_******************************u0pd:
+cursh cursh quote> >....
+],
+name: "Jane Customer",
+object: "customer",
+phone: "+1 555-555-5555",
+readable_country: "Switzerland",
+shipping_address: "",
+subscriptions: [],
+tax_number: "123456789",
+tax_number_abr: "VAT",
+username: "janecustomer",
+website: "https://example.com"
+},
+... more data items here ...
+]
+}
+cursh cursh quote> GET https: //api.chargedesk.com/v1/customers/{CUSTOMER_ID}
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/customers/cus-example-AO0Pnee1Rf \
+-u sk_******************************u0pd:
+cursh cursh quote> >....                                                                                                                   
+    "apply-coupon",
+"add-credit",
+"retry-failed"
+],
+name: "Jane Customer",
+object: "customer",
+phone: "+1 555-555-5555",
+readable_country: "Switzerland",
+shipping_address: "",
+subscriptions: [],
+tax_number: "123456789",
+tax_number_abr: "VAT",
+username: "janecustomer",
+website: "https://example.com"
+}
+cursh cursh quote> POST https: //api.chargedesk.com/v1/customers/{CUSTOMER_ID}
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/customers/cus-example-AO0Pnee1Rf \
+-u sk_******************************u0pd: \
+-d "username=janecustomer"
+cursh cursh quote> >....                                                                                                                   
+    "apply-coupon",
+"add-credit",
+"retry-failed"
+],
+name: "Jane Customer",
+object: "customer",
+phone: "+1 555-555-5555",
+readable_country: "Switzerland",
+shipping_address: "",
+subscriptions: [],
+tax_number: "123456789",
+tax_number_abr: "VAT",
+username: "janecustomer",
+website: "https://example.com"
+}
+cursh cursh quote> GET https: //api.chargedesk.com/v1/customers/grouped
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/customers/grouped?customer%5Bemail%5D=james%40example.com \
+-u sk_******************************u0pd:
+cursh cursh quote> DELETE https: //api.chargedesk.com/v1/customers/{CUSTOMER_ID}
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/customers/cus-example-AO0Pnee1Rf \
+-u sk_******************************u0pd: \
+-X DELETE
+cursh cursh quote> POST https: //api.chargedesk.com/v1/subscriptions
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/subscriptions \
+-u sk_******************************u0pd: \
+-d "subscription_id=sub-example-uSVpZQp8PA" \
+-d "customer_id=cus-example-AO0Pnee1Rf" \
+-d "amount=34.00" \
+-d "currency=EUR" \
+-d "interval=month"
+cursh cursh quote> >....                                                                                                                   
+    "edit"
+],
+object: "subscription",
+product_desc: "",
+product_id: "prod-example-bmULbnYHF6",
+quantity: 2,
+readable_interval: "Monthly",
+setup_amount: 10,
+status: "active",
+status_text: "Active",
+subscription_id: "sub-example-uSVpZQp8PA",
+trial_end: 1698518388,
+trial_period_days: 14,
+trial_start: 0
+}
+cursh cursh quote> GET https: //api.chargedesk.com/v1/subscriptions
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/subscriptions?count=2 \
+-u sk_******************************u0pd:
+cursh cursh quote> >....                                                                                                                   
+product_desc: "",
+product_id: "prod-example-bmULbnYHF6",
+quantity: 2,
+readable_interval: "Monthly",
+setup_amount: 10,
+status: "active",
+status_text: "Active",
+subscription_id: "sub-example-uSVpZQp8PA",
+trial_end: 1698518388,
+trial_period_days: 14,
+trial_start: 0
+},
+... more data items here ...
+]
+}
+cursh cursh quote> GET https: //api.chargedesk.com/v1/subscriptions/{SUBSCRIPTION_ID}
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/subscriptions/sub-example-uSVpZQp8PA \
+-u sk_******************************u0pd:
+cursh cursh quote> >....                                                                                                                   
+    "edit"
+],
+object: "subscription",
+product_desc: "",
+product_id: "prod-example-bmULbnYHF6",
+quantity: 2,
+readable_interval: "Monthly",
+setup_amount: 10,
+status: "active",
+status_text: "Active",
+subscription_id: "sub-example-uSVpZQp8PA",
+trial_end: 1698518388,
+trial_period_days: 14,
+trial_start: 0
+}
+cursh cursh quote> POST https: //api.chargedesk.com/v1/subscriptions/{SUBSCRIPTION_ID}
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/subscriptions/sub-example-uSVpZQp8PA \
+-u sk_******************************u0pd: \
+-d "status=active"
+cursh cursh quote> >....                                                                                                                   
+    "edit"
+],
+object: "subscription",
+product_desc: "",
+product_id: "prod-example-bmULbnYHF6",
+quantity: 2,
+readable_interval: "Monthly",
+setup_amount: 10,
+status: "active",
+status_text: "Active",
+subscription_id: "sub-example-uSVpZQp8PA",
+trial_end: 1698518388,
+trial_period_days: 14,
+trial_start: 0
+}
+cursh cursh quote> POST https: //api.chargedesk.com/v1/products
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/products \
+-u sk_******************************u0pd: \
+-d "product_id=prod-example-bmULbnYHF6" \
+-d "name=Example Product" \
+-d "description=Example product description" \
+-d "amount=34.00" \
+-d "currency=EUR"
+cursh cursh quote> >....                                                                                                                   
+has_agent_log: 0,
+interval: "",
+interval_count: 1,
+logs: [],
+name: "Example Product",
+product_id: "prod-example-bmULbnYHF6",
+quantity: 2,
+readable_interval: "",
+setup_amount: 10,
+status: "complete",
+support_url: "https://billing.webtechnicom.net/product/prod-example-bmULbnYHF6",
+taxable: 1,
+trial_period_days: 14,
+url: "https://example.com/product"
+}
+cursh cursh quote> GET https: //api.chargedesk.com/v1/products
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/products?count=2 \
+-u sk_******************************u0pd:
+cursh cursh quote> >....                                                                                                                   
+logs: [],
+name: "Example Product",
+product_id: "prod-example-bmULbnYHF6",
+quantity: 2,
+readable_interval: "",
+setup_amount: 10,
+status: "complete",
+support_url: "https://billing.webtechnicom.net/product/prod-example-bmULbnYHF6",
+taxable: 1,
+trial_period_days: 14,
+url: "https://example.com/product"
+},
+... more data items here ...
+]
+}
+cursh cursh quote> GET https: //api.chargedesk.com/v1/products/{PRODUCT_ID}
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/products/prod-example-bmULbnYHF6 \
+-u sk_******************************u0pd:
+cursh cursh quote> >....                                                                                                                   
+Choose how frequently the product is charged. Possible values are day, week, month, year or leave blank if the product is not a recurring charge.
+interval_count optional
+Default: 1
+Multiplies the interval to provide a frequency for the product. e.g for every 6 months provide an interval_count of '6' an and interval of 'month'.
+trial_period_days optional
+The number of days which the trial period lasts if the product is a subscription. Enter 0 for none. Must be a positive integer.
+billing_cycles_total optional
+The maximum number of billing cycles if the product is a subscription. Enter 0 or leave blank for unlimited. Must be a positive integer. Not supported by all gateways.
+setup_amount optional
+An additional amount to charge when the product is initially created if the product is a subscription. Has the same requirements as the 'amount' field.
+
+cursh cursh quote> POST https: //api.chargedesk.com/v1/products/{PRODUCT_ID}
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/products/prod-example-bmULbnYHF6 \
+-u sk_******************************u0pd: \
+-d "name=Example Product"
+cursh cursh quote> >....                                                                                                                   
+has_agent_log: 0,
+interval: "",
+interval_count: 1,
+logs: [],
+name: "Example Product",
+product_id: "prod-example-bmULbnYHF6",
+quantity: 2,
+readable_interval: "",
+setup_amount: 10,
+status: "complete",
+support_url: "https://billing.webtechnicom.net/product/prod-example-bmULbnYHF6",
+taxable: 1,
+trial_period_days: 14,
+url: "https://example.com/product"
+}
+cursh cursh quote> POST https: //api.chargedesk.com/v1/webhooks
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/webhooks \
+-u sk_******************************u0pd: \
+-d "url=https://yoursite.com/chargedesk-webhook" \
+-d "all=1"
+cursh cursh quote> {
+"webhook_id": "{WEBHOOK_ID}"
+}
+cursh cursh quote> GET https: //api.chargedesk.com/v1/webhooks/notifications
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/webhooks/notifications \
+-u sk_******************************u0pd:
+cursh cursh quote> >....                                                                                                                   
+    description: "Sent when a charge on an active subscription is due in X days."
+},
+{
+    notification: "subscription_trial_ending",
+    object: "Subscription",
+    name: "Subscription Subscription Trial Ends Soon",
+    description: "Sent when a charge on a trial subscription is due in X days."
+},
+{
+    notification: "agent_log_new",
+    object: "AgentLog",
+    name: "Agent Log Created",
+    description: "Sent when a new agent log is created."
+}
+]
+cursh cursh quote> DELETE https: //api.chargedesk.com/v1/webhooks/{WEBHOOK_ID}
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/webhooks/{WEBHOOK_ID} \
+-u sk_******************************u0pd: \
+-X DELETE
+cursh cursh quote> POST https: //api.chargedesk.com/v1/agents
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/agents \
+-u sk_******************************u0pd: \
+-d "name=John Example" \
+-d "email=john@example.com" \
+-d "role=agent"
+cursh cursh quote> DELETE https: //api.chargedesk.com/v1/agents/{AGENT_EMAIL}
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/agents/{AGENT_EMAIL} \
+-u sk_******************************u0pd: \
+-X DELETE
+cursh cursh quote> GET https: //api.chargedesk.com/v1/log/activity
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/log/activity?count=2 \
+-u sk_******************************u0pd:
+cursh cursh quote> >....                                                                                                                   
+company: "NETmanagement",
+context: null,
+description: "Charge Refunded",
+event: "charge-refund",
+ip: "1.2.3.4",
+object_id: "example-zsmAniigl2w96y4MsZZ8TgOm",
+object_type: "charge",
+occurred: 1697308788,
+params: null,
+source: "web",
+sub_description: ""
+},
+... more data items here ...
+]
+}
+cursh cursh quote> GET https: //api.chargedesk.com/v1/log/cancellations
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/log/cancellations?count=2 \
+-u sk_******************************u0pd:
+cursh cursh quote> >....                                                                                                                   
+"offset": 0,
+"data": [
+{
+action: "cancel",
+customer_id: "cus-example-AO0Pnee1Rf",
+email: "customer@example.com",
+ip: "1.2.3.4",
+method: "at_period_end",
+occurred: 1697308788,
+reason: "Example cancellation for demonstration purposes",
+subscription_id: "sub-example-uSVpZQp8PA"
+},
+... more data items here ...
+]
+}
+cursh cursh quote> GET https: //api.chargedesk.com/v1/charges
+cursh cursh quote> # This example uses the secret key for webtechnicom
+curl https: //api.chargedesk.com/v1/charges?count=2 \
+-u sk_******************************u0pd:
+cursh cursh quote> 

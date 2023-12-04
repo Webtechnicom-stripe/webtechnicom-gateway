@@ -1,0 +1,19 @@
+# Modifications de l’environnement du terminal
+
+## Extension : GitHub.codespaces
+
+- `CODESPACE_VSCODE_FOLDER=/workspaces/webtechnicom-gateway`
+
+## Extension : vscode.git
+
+Active les fonctionnalités suivantes : git auth provider
+
+- `GIT_ASKPASS=/vscode/bin/linux-x64/f1b07bd25dfad64b0167beb15359ae573aecd2cc/extensions/git/dist/askpass.sh`
+- `VSCODE_GIT_ASKPASS_NODE=/vscode/bin/linux-x64/f1b07bd25dfad64b0167beb15359ae573aecd2cc/node`
+- `VSCODE_GIT_ASKPASS_EXTRA_ARGS=`
+- `VSCODE_GIT_ASKPASS_MAIN=/vscode/bin/linux-x64/f1b07bd25dfad64b0167beb15359ae573aecd2cc/extensions/git/dist/askpass-main.js`
+- `VSCODE_GIT_IPC_HANDLE=/tmp/vscode-git-24c71119e6.sock`
+
+## Extension : golang.go
+
+- `PATH=/usr/local/go/bin:${env:PATH}`
